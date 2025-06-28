@@ -8,14 +8,12 @@ const DoctorCard = ({
   image,
   language = "ar",
 }) => {
-  // ✅ Swap this line
-  const textAlign =
-    language === "ar" ? "text-left items-start" : "text-left items-start";
+  const isArabic = language === "ar";
 
   return (
-    <div className="w-[240px] flex flex-col gap-2">
+    <div className="w-full max-w-[240px] flex flex-col gap-2">
       {/* Image container */}
-      <div className="w-[240px] h-[186.25px] bg-[#023554] rounded-[9.38px] relative overflow-hidden">
+      <div className="w-full h-[186.25px] bg-[#023554] rounded-[9.38px] relative overflow-hidden">
         <img
           src={image || docsImage}
           alt={name}
@@ -27,27 +25,31 @@ const DoctorCard = ({
       </div>
 
       {/* Text content */}
-      <div className={`flex flex-col w-full px-1 ${textAlign}`}>
+      <div
+        className={`flex flex-col w-full px-1 ${
+          isArabic ? "items-end text-right" : "items-start text-left"
+        }`}
+      >
         <span
-          className="text-[#222222] font-medium text-[18px]"
+          className="text-[#222222] font-medium text-[16px] sm:text-[18px]"
           style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
         >
           {name}
         </span>
         <span
-          className="text-[#686767] text-[16px] leading-[160%]"
+          className="text-[#686767] text-[14px] sm:text-[16px] leading-[160%]"
           style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
         >
           {specialization}
         </span>
       </div>
 
-      {/* Button */}
+      {/* View More Button */}
       <button
-        className="w-[240px] h-[40px] border border-[#0798F1] rounded-[8px] text-[#0798F1] font-medium text-[18px] flex items-center justify-center"
+        className="w-full h-[40px] border border-[#0798F1] rounded-[8px] text-[#0798F1] font-medium text-[16px] sm:text-[18px] flex items-center justify-center"
         style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
       >
-        {language === "ar" ? "عرض المزيد" : "View More"}
+        {isArabic ? "عرض المزيد" : "View More"}
       </button>
     </div>
   );
