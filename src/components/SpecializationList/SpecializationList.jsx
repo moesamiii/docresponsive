@@ -23,7 +23,7 @@ const SpecializationList = () => {
 
   return (
     <>
-      {/* === Mobile Toggle Button === */}
+      {/* === mobile toggle btn === */}
       <div className="md:hidden w-full px-4 mb-2">
         <button
           className="w-full bg-[#023554] text-white rounded-md px-4 py-2 flex justify-between items-center"
@@ -54,7 +54,7 @@ const SpecializationList = () => {
         </button>
       </div>
 
-      {/* === List Panel (Dropdown on mobile, full on desktop) === */}
+      {/*  list panel drop down  on mobile, full on desktop  */}
       <div
         className={`
           bg-[#023554]
@@ -70,7 +70,7 @@ const SpecializationList = () => {
           max-h-[500px] md:max-h-none
         `}
       >
-        {/* === All Doctors Button === */}
+        {/* all doctors button */}
         <button
           className="w-full h-[40px] bg-[#F3FAFE] rounded-[8px] flex items-center justify-between px-3 mb-2"
           onClick={() => {
@@ -100,11 +100,11 @@ const SpecializationList = () => {
           </span>
         </button>
 
-        {/* === Content States === */}
+        {/* content states */}
         {loading && <p className="text-white text-center">تحميل...</p>}
         {error && <p className="text-red-500 text-center">خطأ: {error}</p>}
 
-        {/* === Specialization List === */}
+        {/*  specialization list === */}
         {Array.isArray(list) && list.length > 0
           ? list.map((item) => {
               const name = isArabic ? item.ar_Name : item.en_Name;

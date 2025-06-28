@@ -52,7 +52,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* ✅ Left side */}
+        {/* left side  */}
         <div className="flex items-center gap-[16px]">
           <img
             src={bell}

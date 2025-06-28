@@ -12,7 +12,7 @@ const DoctorCard = ({
 
   return (
     <div className="w-full max-w-[240px] flex flex-col gap-2">
-      {/* Image container */}
+      {/* image container  */}
       <div className="w-full h-[186.25px] bg-[#023554] rounded-[9.38px] relative overflow-hidden">
         <img
           src={image || docsImage}
@@ -24,7 +24,7 @@ const DoctorCard = ({
         </div>
       </div>
 
-      {/* Text content */}
+      {/* text content  */}
       <div
         className={`flex flex-col w-full px-1 ${
           isArabic ? "items-end text-right" : "items-start text-left"
@@ -44,7 +44,7 @@ const DoctorCard = ({
         </span>
       </div>
 
-      {/* View More Button */}
+      {/* view more btn */}
       <button
         className="w-full h-[40px] border border-[#0798F1] rounded-[8px] text-[#0798F1] font-medium text-[16px] sm:text-[18px] flex items-center justify-center"
         style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
