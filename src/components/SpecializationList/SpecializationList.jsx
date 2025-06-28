@@ -23,7 +23,7 @@ const SpecializationList = () => {
 
   return (
     <>
-      {/* === MOBILE TOGGLE BUTTON === */}
+      {/* === Mobile Toggle Button === */}
       <div className="md:hidden w-full px-4 mb-2">
         <button
           className="w-full bg-[#023554] text-white rounded-md px-4 py-2 flex justify-between items-center"
@@ -54,7 +54,7 @@ const SpecializationList = () => {
         </button>
       </div>
 
-      {/* === LIST PANEL (VISIBLE ON DESKTOP or if Opened on Mobile) === */}
+      {/* === List Panel (Dropdown on mobile, full on desktop) === */}
       <div
         className={`
           bg-[#023554]
@@ -64,14 +64,13 @@ const SpecializationList = () => {
           shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]
           flex flex-col
           overflow-y-auto
-          max-h-[500px]
-          transition-all
-          duration-300
+          transition-all duration-300
           ${isOpen ? "block" : "hidden"} md:block
           w-full md:w-[230px]
+          max-h-[500px] md:max-h-none
         `}
       >
-        {/* All Button */}
+        {/* === All Doctors Button === */}
         <button
           className="w-full h-[40px] bg-[#F3FAFE] rounded-[8px] flex items-center justify-between px-3 mb-2"
           onClick={() => {
@@ -101,9 +100,11 @@ const SpecializationList = () => {
           </span>
         </button>
 
+        {/* === Content States === */}
         {loading && <p className="text-white text-center">تحميل...</p>}
         {error && <p className="text-red-500 text-center">خطأ: {error}</p>}
 
+        {/* === Specialization List === */}
         {Array.isArray(list) && list.length > 0
           ? list.map((item) => {
               const name = isArabic ? item.ar_Name : item.en_Name;
@@ -138,7 +139,11 @@ const SpecializationList = () => {
               );
             })
           : !loading &&
-            !error && <p className="text-white text-center">لا توجد بيانات</p>}
+            !error && (
+              <p className="text-white text-center">
+                {isArabic ? "لا توجد بيانات" : "No data found"}
+              </p>
+            )}
       </div>
     </>
   );
