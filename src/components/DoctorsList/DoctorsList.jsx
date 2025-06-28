@@ -24,7 +24,20 @@ const DoctorsList = () => {
 
   return (
     <div className="w-full px-4 sm:px-6 lg:px-0 py-6 flex justify-center">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-6 max-w-[1008px] w-full">
+      <div
+        className="
+        grid 
+        grid-cols-1 
+        sm:grid-cols-2 
+        md:grid-cols-2 
+        lg:grid-cols-3 
+        xl:grid-cols-4 
+        gap-x-4 
+        gap-y-6 
+        max-w-[1008px] 
+        w-full
+      "
+      >
         {doctors.map((item) => {
           const doctor = item.doctor.doctorPersonalInfo;
 
