@@ -66,7 +66,7 @@ const Navbar = () => {
             className="w-[24px] h-[24px] object-contain"
           />
 
-          {/* ✅ Language toggle */}
+          {/*  Language click */}
           <div
             className="flex items-center gap-[6.67px] cursor-pointer"
             onClick={toggleLanguage}

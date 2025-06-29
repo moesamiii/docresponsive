@@ -16,7 +16,7 @@ const MedicalTourismHeader = () => {
             isArabic ? "flex-row-reverse" : "flex-row"
           }`}
         >
-          {/* === Instruction + Search Section === */}
+          {/*  Instruction + Search Section  */}
           <div className="flex items-center gap-2">
             {/* Search Icon */}
             <div className="w-[45px] h-[40px] bg-[#023554] rounded-[8px] flex items-center justify-center cursor-pointer">
