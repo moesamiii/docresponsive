@@ -1,6 +1,5 @@
 import React from "react";
 import docsImage from "../../assets/docsimage.png";
-
 {
   /* this component recive props from parent component from . map in doctor list  */
 }

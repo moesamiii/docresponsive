@@ -6,6 +6,7 @@ import doctorsReducer, { fetchDoctors } from "./doctorsSlice";
 import languageReducer from "./languageSlice";
 import uiReducer from "./uiSlice"; //
 
+// redux store
 const store = configureStore({
   reducer: {
     specializations: specializationReducer,

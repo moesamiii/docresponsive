@@ -30,7 +30,7 @@ const DoctorsList = () => {
       <div
         className="
           grid 
-          grid-cols-2       /*  2 cards per row for mobile view */
+          grid-cols-2       
           sm:grid-cols-2
           md:grid-cols-2 
           lg:grid-cols-3 
