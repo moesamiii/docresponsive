@@ -1,20 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSpecializations } from "../../store/specializationSlice";
 import {
   fetchDoctorsBySpecialization,
   fetchDoctors,
 } from "../../store/doctorsSlice";
+import {
+  toggleSpecialization,
+  setSpecializationOpen,
+} from "../../store/uiSlice";
 
 const SpecializationList = () => {
   const dispatch = useDispatch();
+
   const { list, loading, error } = useSelector(
     (state) => state.specializations
   );
   const currentLang = useSelector((state) => state.language.current);
   const isArabic = currentLang === "ar";
-
-  const [isOpen, setIsOpen] = useState(false);
+  const isOpen = useSelector((state) => state.ui.isSpecializationOpen);
 
   useEffect(() => {
     dispatch(fetchSpecializations());
@@ -27,7 +31,7 @@ const SpecializationList = () => {
       <div className="md:hidden w-full px-4 mb-2">
         <button
           className="w-full bg-[#023554] text-white rounded-md px-4 py-2 flex justify-between items-center"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => dispatch(toggleSpecialization())}
         >
           <span
             className="font-medium text-sm"
@@ -54,7 +58,7 @@ const SpecializationList = () => {
         </button>
       </div>
 
-      {/*  list panel drop down  on mobile, full on desktop  */}
+      {/* === specialization list panel === */}
       <div
         className={`
           bg-[#023554]
@@ -75,7 +79,7 @@ const SpecializationList = () => {
           className="w-full h-[40px] bg-[#F3FAFE] rounded-[8px] flex items-center justify-between px-3 mb-2"
           onClick={() => {
             dispatch(fetchDoctors());
-            setIsOpen(false);
+            dispatch(setSpecializationOpen(false));
           }}
         >
           <svg
@@ -104,7 +108,7 @@ const SpecializationList = () => {
         {loading && <p className="text-white text-center">تحميل...</p>}
         {error && <p className="text-red-500 text-center">خطأ: {error}</p>}
 
-        {/*  specialization list === */}
+        {/* list items */}
         {Array.isArray(list) && list.length > 0
           ? list.map((item) => {
               const name = isArabic ? item.ar_Name : item.en_Name;
@@ -114,7 +118,7 @@ const SpecializationList = () => {
                   key={item.id}
                   onClick={() => {
                     dispatch(fetchDoctorsBySpecialization(item.id));
-                    setIsOpen(false);
+                    dispatch(setSpecializationOpen(false)); //
                   }}
                   className="w-full border border-transparent hover:border-white rounded-[8px] p-2 flex items-center cursor-pointer gap-2"
                 >

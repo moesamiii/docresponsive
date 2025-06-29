@@ -3,13 +3,15 @@ import specializationReducer, {
   fetchSpecializations,
 } from "./specializationSlice";
 import doctorsReducer, { fetchDoctors } from "./doctorsSlice";
-import languageReducer from "./languageSlice"; //
+import languageReducer from "./languageSlice";
+import uiReducer from "./uiSlice"; //
 
 const store = configureStore({
   reducer: {
     specializations: specializationReducer,
     doctors: doctorsReducer,
-    language: languageReducer, //
+    language: languageReducer,
+    ui: uiReducer,
   },
 });
 
