@@ -9,10 +9,11 @@ const DoctorCard = ({
   language = "ar",
 }) => {
   const isArabic = language === "ar";
+  const shortName = name?.split(" ").slice(0, 2).join(" ");
 
   return (
     <div className="w-full max-w-[240px] flex flex-col gap-2">
-      {/* image container  */}
+      {/* Image container */}
       <div className="w-full h-[186.25px] bg-[#023554] rounded-[9.38px] relative overflow-hidden">
         <img
           src={image || docsImage}
@@ -24,30 +25,33 @@ const DoctorCard = ({
         </div>
       </div>
 
-      {/* text content  */}
+      {/* Text content - Fixed direction and alignment */}
       <div
         className={`flex flex-col w-full px-1 ${
-          isArabic ? "items-end text-right" : "items-start text-left"
+          isArabic ? "text-right" : "text-left"
         }`}
       >
         <span
           className="text-[#222222] font-medium text-[16px] sm:text-[18px]"
           style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+          dir={isArabic ? "rtl" : "ltr"}
         >
-          {name}
+          {shortName}
         </span>
         <span
           className="text-[#686767] text-[14px] sm:text-[16px] leading-[160%]"
           style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+          dir={isArabic ? "rtl" : "ltr"}
         >
           {specialization}
         </span>
       </div>
 
-      {/* view more btn */}
+      {/* View more button */}
       <button
         className="w-full h-[40px] border border-[#0798F1] rounded-[8px] text-[#0798F1] font-medium text-[16px] sm:text-[18px] flex items-center justify-center"
         style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+        dir={isArabic ? "rtl" : "ltr"}
       >
         {isArabic ? "عرض المزيد" : "View More"}
       </button>
