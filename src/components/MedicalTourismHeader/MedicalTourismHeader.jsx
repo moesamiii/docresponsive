@@ -11,13 +11,43 @@ const MedicalTourismHeader = () => {
   return (
     <div className="w-full bg-white px-4 sm:px-6 lg:px-10 py-4 md:py-6">
       <div className="max-w-[1440px] mx-auto w-full">
-        <div
-          className={`flex flex-row justify-between items-center flex-wrap gap-4 ${
-            isArabic ? "flex-row-reverse" : "flex-row"
-          }`}
-        >
-          {/*  Instruction + Search Section  */}
-          <div className="flex items-center gap-2">
+        {/* Changed to simple flex with justify-between - no flex-row-reverse */}
+        <div className="flex justify-between items-center flex-wrap gap-4">
+          {/* === Back + Title Section === - Always on left in English, right in Arabic */}
+          <div
+            className={`flex items-center gap-2 order-1 ${
+              isArabic ? "order-2 text-right" : "order-1 text-left"
+            }`}
+          >
+            <img
+              src={arrowImage}
+              alt={isArabic ? "Arrow Right" : "Arrow Left"}
+              className={`w-[12px] h-[24px] object-contain ${
+                isArabic ? "rotate-[270deg]" : "rotate-90"
+              }`}
+            />
+            <div className="flex flex-col">
+              <span
+                className="text-[14px] sm:text-[16px] md:text-[18px] font-medium text-[#6F6F6F]"
+                style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+              >
+                {isArabic ? "الرجوع" : "Back"}
+              </span>
+              <h1
+                className="text-[18px] sm:text-[20px] md:text-[24px] font-semibold text-[#222222]"
+                style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+              >
+                {isArabic ? "الأطباء" : "Doctors & Centers"}
+              </h1>
+            </div>
+          </div>
+
+          {/* Instruction + Search Section - Always on right in English, left in Arabic */}
+          <div
+            className={`flex items-center gap-2 order-2 ${
+              isArabic ? "order-1" : "order-2"
+            }`}
+          >
             {/* Search Icon */}
             <div className="w-[45px] h-[40px] bg-[#023554] rounded-[8px] flex items-center justify-center cursor-pointer">
               <img
@@ -58,35 +88,6 @@ const MedicalTourismHeader = () => {
                   </span>
                 </>
               )}
-            </div>
-          </div>
-
-          {/* === Back + Title Section === */}
-          <div
-            className={`flex items-center gap-2 ${
-              isArabic ? "text-right" : "text-left"
-            }`}
-          >
-            <img
-              src={arrowImage}
-              alt={isArabic ? "Arrow Right" : "Arrow Left"}
-              className={`w-[12px] h-[24px] object-contain ${
-                isArabic ? "rotate-[270deg]" : "rotate-90"
-              }`}
-            />
-            <div className="flex flex-col">
-              <span
-                className="text-[14px] sm:text-[16px] md:text-[18px] font-medium text-[#6F6F6F]"
-                style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
-              >
-                {isArabic ? "الرجوع" : "Back"}
-              </span>
-              <h1
-                className="text-[18px] sm:text-[20px] md:text-[24px] font-semibold text-[#222222]"
-                style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
-              >
-                {isArabic ? "الأطباء" : "Doctors & Centers"}
-              </h1>
             </div>
           </div>
         </div>
