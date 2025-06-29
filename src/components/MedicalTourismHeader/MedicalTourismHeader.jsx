@@ -11,9 +11,8 @@ const MedicalTourismHeader = () => {
   return (
     <div className="w-full bg-white px-4 sm:px-6 lg:px-10 py-4 md:py-6">
       <div className="max-w-[1440px] mx-auto w-full">
-        {/* Changed to simple flex with justify-between - no flex-row-reverse */}
         <div className="flex justify-between items-center flex-wrap gap-4">
-          {/* === Back + Title Section === - Always on left in English, right in Arabic */}
+          {/*  back + title section  always on left in english and right in Arabic */}
           <div
             className={`flex items-center gap-2 order-1 ${
               isArabic ? "order-2 text-right" : "order-1 text-left"
@@ -42,13 +41,13 @@ const MedicalTourismHeader = () => {
             </div>
           </div>
 
-          {/* Instruction + Search Section - Always on right in English, left in Arabic */}
+          {/* instruction + search section - always on right in english, left in Arabic */}
           <div
             className={`flex items-center gap-2 order-2 ${
               isArabic ? "order-1" : "order-2"
             }`}
           >
-            {/* Search Icon */}
+            {/* search Icon */}
             <div className="w-[45px] h-[40px] bg-[#023554] rounded-[8px] flex items-center justify-center cursor-pointer">
               <img
                 src={mokIcon}
@@ -57,7 +56,7 @@ const MedicalTourismHeader = () => {
               />
             </div>
 
-            {/* Instruction Box */}
+            {/* instruction Box */}
             <div className="flex items-center gap-2 px-4 md:px-5 py-1.5 rounded-[8px] bg-[#023554]">
               {isArabic ? (
                 <>

@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const languageSlice = createSlice({
   name: "language",
   initialState: {
-    current: "ar", //  o the default way ists arabic
+    current: "ar", //  on the default way ists arabic
   },
   reducers: {
     setLanguage: (state, action) => {

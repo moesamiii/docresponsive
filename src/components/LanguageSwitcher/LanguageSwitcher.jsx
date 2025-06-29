@@ -4,12 +4,12 @@ import { setLanguage } from "../../store/languageSlice";
 
 const LanguageSwitcher = () => {
   const dispatch = useDispatch();
-  const currentLang = useSelector((state) => state.language.current);
+  const currentLang = useSelector((state) => state.language.current); // read current langauge
 
   return (
     <div className="flex gap-2 mb-4">
       <button
-        onClick={() => dispatch(setLanguage("ar"))}
+        onClick={() => dispatch(setLanguage("ar"))} // change the languge
         className={`px-4 py-2 rounded ${
           currentLang === "ar" ? "bg-blue-600 text-white" : "bg-gray-200"
         }`}
