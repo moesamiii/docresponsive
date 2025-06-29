@@ -11,6 +11,12 @@ const DoctorCard = ({
   const isArabic = language === "ar";
   const shortName = name?.split(" ").slice(0, 2).join(" ");
 
+  // Handle broken images: use fallback if image fails to load
+  const handleImageError = (e) => {
+    e.target.onerror = null; // prevent infinite loop
+    e.target.src = docsImage;
+  };
+
   return (
     <div className="w-full max-w-[240px] flex flex-col gap-2">
       {/* Image container */}
@@ -18,6 +24,7 @@ const DoctorCard = ({
         <img
           src={image || docsImage}
           alt={name}
+          onError={handleImageError} // ✅ fallback for 404 images
           className="w-full h-full object-cover"
         />
         <div className="absolute top-2 left-2 bg-[#0798F1] text-white text-xs font-semibold rounded px-2 py-0.5 flex items-center gap-1">
