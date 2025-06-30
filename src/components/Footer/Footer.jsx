@@ -8,13 +8,16 @@ import instagramIcon from "../../assets/instagramicon.png";
 import threadIcon from "../../assets/threadicon.png";
 import tiktokIcon from "../../assets/tiktokicon.png";
 import snapIcon from "../../assets/snapicon.png";
+import callIcon from "../../assets/leftfootercall.png";
+import mailIcon from "../../assets/leftfootermail.png";
+import locationIcon from "../../assets/leftfooterlocation.png";
 
 const Footer = () => {
   return (
     <footer className="w-full bg-[#111827] px-[85px] pt-[64px] pb-[64px]">
       <div className="w-full max-w-[1280px] h-[385px] px-4 mx-auto gap-[36px]">
-        <div className="w-[1248px] h-[292px] flex gap-[32px]">
-          {/* first right container */}
+        <div className="w-[1248px] h-[292px] flex gap-[70px]">
+          {/* Column 1 - Logo + Description + Icons */}
           <div className="w-[288px] h-[292px] flex flex-col gap-[24px]">
             <img
               src={footerLogo}
@@ -29,69 +32,144 @@ const Footer = () => {
               الصحية المتكاملة إلى منزلك.
             </div>
 
-            <div className="w-[330px] h-[32px] flex flex-col gap-[4px]">
+            <div className="w-[320px] h-[32px] flex flex-col gap-[4px]">
               <div className="flex gap-[10px]">
-                {/* Facebook Icon */}
-                <div className="w-[32px] h-[32px] rounded-[24px] bg-[#1F2937] flex items-center justify-center p-[7px]">
-                  <img
-                    src={facebookIcon}
-                    alt="Facebook Icon"
-                    className="w-[12px] h-[12px]"
-                  />
-                </div>
+                {[
+                  facebookIcon,
+                  linkedinIcon,
+                  youtubeIcon,
+                  xIcon,
+                  instagramIcon,
+                  threadIcon,
+                  tiktokIcon,
+                  snapIcon,
+                ].map((icon, index) => (
+                  <div
+                    key={index}
+                    className="w-[32px] h-[32px] rounded-[24px] bg-[#1F2937] flex items-center justify-center p-[7px]"
+                  >
+                    <img
+                      src={icon}
+                      alt={`icon-${index}`}
+                      className="w-[12px] h-[12px]"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
 
-                {/* LinkedIn Icon */}
-                <div className="w-[32px] h-[32px] rounded-[24px] bg-[#1F2937] flex items-center justify-center p-[7px]">
-                  <img
-                    src={linkedinIcon}
-                    alt="LinkedIn Icon"
-                    className="w-[12px] h-[12px]"
-                  />
-                </div>
+          {/* Column 2 - Company Info */}
+          <div className="w-[288px] h-[292px] flex flex-col gap-[24px] ">
+            <div
+              className="w-[288px] h-[28px] text-[18px] leading-[28px] font-bold text-right text-white"
+              style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+            >
+              الشركة
+            </div>
+            <div className="w-[288px] h-[132px] flex flex-col gap-[12px]">
+              {["من نحن ؟", "أنضم الينا", "الدعم", "أسئلة و أجوبة"].map(
+                (text, index) => (
+                  <div
+                    key={index}
+                    className="text-[16px] leading-[24px] font-normal text-right text-[#9CA3AF]"
+                    style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+                  >
+                    {text}
+                  </div>
+                )
+              )}
+            </div>
+          </div>
 
-                {/* youtube icon */}
-                <div className="w-[32px] h-[32px] rounded-[24px] bg-[#1F2937] flex items-center justify-center p-[7px]">
-                  <img
-                    src={youtubeIcon}
-                    alt="YouTube Icon"
-                    className="w-[12px] h-[12px]"
-                  />
-                </div>
+          {/* Column 3 - Services */}
+          <div className="w-[288px] h-[292px] flex flex-col gap-[24px]">
+            <div
+              className="w-[288px] h-[28px] text-[18px] leading-[28px] font-bold text-right text-white"
+              style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+            >
+              خدماتنا
+            </div>
 
-                <div className="w-[32px] h-[32px] rounded-[24px] bg-[#1F2937] flex items-center justify-center p-[7px]">
-                  <img src={xIcon} alt="X Icon" className="w-[12px] h-[12px]" />
+            <div className="w-[288px] h-[240px] flex flex-col gap-[12px] mt-[8px]">
+              {[
+                "التحاليل",
+                "الأشعة",
+                "العيادات الخارجية",
+                "الرعاية المنزلية",
+                "السياحة العلاجية",
+              ].map((service, index) => (
+                <div
+                  key={index}
+                  className="text-[16px] leading-[24px] font-normal text-right text-[#9CA3AF]"
+                  style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+                >
+                  {service}
                 </div>
+              ))}
+            </div>
+          </div>
 
-                <div className="w-[32px] h-[32px] rounded-[24px] bg-[#1F2937] flex items-center justify-center p-[7px]">
-                  <img
-                    src={instagramIcon}
-                    alt="Instagram Icon"
-                    className="w-[12px] h-[12px]"
-                  />
-                </div>
+          {/* Column 4 - Contact */}
+          <div className="w-[288px] h-[292px] flex flex-col gap-[24px]">
+            <div
+              className="w-[288px] h-[28px] text-[18px] leading-[28px] font-bold text-right text-white"
+              style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+            >
+              تواصل معنا
+            </div>
 
-                <div className="w-[32px] h-[32px] rounded-[24px] bg-[#1F2937] flex items-center justify-center p-[7px]">
-                  <img
-                    src={threadIcon}
-                    alt="Thread Icon"
-                    className="w-[12px] h-[12px]"
-                  />
-                </div>
+            <div className="w-[288px] h-[132px] flex flex-col gap-[16px]">
+              {/* Phone */}
+              <div className="flex items-center gap-[12px]">
+                <img
+                  src={callIcon}
+                  alt="Phone Icon"
+                  className="w-[16px] h-[16px]"
+                />
+                <p
+                  className="text-[16px] leading-[24px] font-normal text-[#9CA3AF] text-right flex-1"
+                  style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+                >
+                  +962790909806
+                </p>
+              </div>
 
-                <div className="w-[32px] h-[32px] rounded-[24px] bg-[#1F2937] flex items-center justify-center p-[7px]">
-                  <img
-                    src={tiktokIcon}
-                    alt="TikTok Icon"
-                    className="w-[12px] h-[12px]"
-                  />
-                </div>
+              {/* Email */}
+              <div className="flex items-center gap-[12px]">
+                <img
+                  src={mailIcon}
+                  alt="Mail Icon"
+                  className="w-[16px] h-[16px]"
+                />
+                <p
+                  className="text-[16px] leading-[24px] font-normal text-[#9CA3AF] text-right flex-1"
+                  style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+                >
+                  info@ulmcare.jo
+                </p>
+              </div>
 
-                <div className="w-[32px] h-[32px] rounded-[24px] bg-[#1F2937] flex items-center justify-center p-[7px]">
-                  <img
-                    src={snapIcon}
-                    alt="Snapchat Icon"
-                    className="w-[12px] h-[12px]"
-                  />
+              {/* Address */}
+              <div className="flex items-start gap-[12px]">
+                <img
+                  src={locationIcon}
+                  alt="Location Icon"
+                  className="w-[16px] h-[16px] mt-[2px]"
+                />
+                <div className="flex flex-col text-right flex-1">
+                  <p
+                    className="text-[16px] leading-[24px] font-normal text-[#9CA3AF]"
+                    style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+                  >
+                    Wasfi AlTal St. P.O. Box. 5873
+                  </p>
+                  <p
+                    className="text-[16px] leading-[24px] font-normal text-[#9CA3AF]"
+                    style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+                  >
+                    Amman - 11953 Jordan
+                  </p>
                 </div>
               </div>
             </div>
