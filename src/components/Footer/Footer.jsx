@@ -15,7 +15,7 @@ import locationIcon from "../../assets/leftfooterlocation.png";
 const Footer = () => {
   return (
     <footer className="w-full bg-[#111827] px-[85px] pt-[64px] pb-[64px]">
-      <div className="w-full max-w-[1280px] h-[385px] px-4 mx-auto gap-[36px]">
+      <div className="w-full max-w-[1280px] px-4 mx-auto gap-[36px]">
         <div className="w-[1248px] h-[292px] flex gap-[70px]">
           {/* Column 1 - Logo + Description + Icons */}
           <div className="w-[288px] h-[292px] flex flex-col gap-[24px]">
@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
 
           {/* Column 2 - Company Info */}
-          <div className="w-[288px] h-[292px] flex flex-col gap-[24px] ">
+          <div className="w-[288px] h-[292px] flex flex-col gap-[24px]">
             <div
               className="w-[288px] h-[28px] text-[18px] leading-[28px] font-bold text-right text-white"
               style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
@@ -120,7 +120,6 @@ const Footer = () => {
             </div>
 
             <div className="w-[288px] h-[132px] flex flex-col gap-[16px]">
-              {/* Phone */}
               <div className="flex items-center gap-[12px]">
                 <img
                   src={callIcon}
@@ -135,7 +134,6 @@ const Footer = () => {
                 </p>
               </div>
 
-              {/* Email */}
               <div className="flex items-center gap-[12px]">
                 <img
                   src={mailIcon}
@@ -150,7 +148,6 @@ const Footer = () => {
                 </p>
               </div>
 
-              {/* Address */}
               <div className="flex items-start gap-[12px]">
                 <img
                   src={locationIcon}
@@ -172,6 +169,31 @@ const Footer = () => {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ✅ Bottom Bar */}
+        <div className="w-full border-t border-[#1F2937] mt-[40px] pt-[24px] flex justify-between items-center">
+          <div
+            className="text-[14px] font-normal text-[#9CA3AF]"
+            style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+          >
+            جميع الحقوق محفوظة@ New ULM
+          </div>
+
+          <div className="flex gap-[32px]">
+            <div
+              className="text-[14px] font-normal text-[#9CA3AF] cursor-pointer hover:text-white transition"
+              style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+            >
+              سياسة الخصوصية
+            </div>
+            <div
+              className="text-[14px] font-normal text-[#9CA3AF] cursor-pointer hover:text-white transition"
+              style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+            >
+              الشروط والأحكام
             </div>
           </div>
         </div>
