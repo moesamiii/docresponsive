@@ -1,16 +1,24 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-// this for get all doctors without filtering
-const fetchDoctors = createAsyncThunk("doctors/fetchAll", async () => {
-  const response = await axios.get(
-    "https://test.newulmmed.com/api/Doctor/GetAllDoctors"
-  );
-  return response.data.data;
-});
+export const fetchDoctors = createAsyncThunk(
+  "doctors/fetchAll",
+  async (params = { pageNumber: 1, pageSize: 12 }) => {
+    const { pageNumber, pageSize } = params;
 
-// in this code this is the way to get doctor depend on his spepcialization
-const fetchDoctorsBySpecialization = createAsyncThunk(
+    const response = await axios.get(
+      `https://test.newulmmed.com/api/Doctor/GetAllDoctors?pageNumber=${pageNumber}&pageSize=${pageSize}`
+    );
+
+    return {
+      doctors: response.data.data,
+      totalPages: response.data.numberOfPages,
+      currentPage: response.data.pageNumber,
+    };
+  }
+);
+
+export const fetchDoctorsBySpecialization = createAsyncThunk(
   "doctors/fetchBySpecialization",
   async (specializationId) => {
     const response = await axios.get(
@@ -26,17 +34,22 @@ const doctorsSlice = createSlice({
     doctors: [],
     loading: false,
     error: null,
+    currentPage: 1,
+    totalPages: 1,
   },
   reducers: {},
   extraReducers: (builder) => {
     builder
+
       .addCase(fetchDoctors.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
       .addCase(fetchDoctors.fulfilled, (state, action) => {
         state.loading = false;
-        state.doctors = action.payload;
+        state.doctors = action.payload.doctors;
+        state.totalPages = action.payload.totalPages;
+        state.currentPage = action.payload.currentPage;
       })
       .addCase(fetchDoctors.rejected, (state, action) => {
         state.loading = false;
@@ -50,6 +63,8 @@ const doctorsSlice = createSlice({
       .addCase(fetchDoctorsBySpecialization.fulfilled, (state, action) => {
         state.loading = false;
         state.doctors = action.payload;
+        state.totalPages = 1;
+        state.currentPage = 1;
       })
       .addCase(fetchDoctorsBySpecialization.rejected, (state, action) => {
         state.loading = false;
@@ -57,8 +72,5 @@ const doctorsSlice = createSlice({
       });
   },
 });
-
-//  this is the good wat to export it
-export { fetchDoctors, fetchDoctorsBySpecialization };
 
 export default doctorsSlice.reducer;

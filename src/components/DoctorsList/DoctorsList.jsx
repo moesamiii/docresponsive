@@ -1,10 +1,23 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchDoctors } from "../../store/doctorsSlice";
 import DoctorCard from "../DoctorCard/DoctorCard";
+import PaginationControls from "./PaginationControls";
 
 const DoctorsList = () => {
-  const { doctors, loading, error } = useSelector((state) => state.doctors);
+  const dispatch = useDispatch();
+  const { doctors, loading, error, currentPage, totalPages } = useSelector(
+    (state) => state.doctors
+  );
   const currentLang = useSelector((state) => state.language.current);
+
+  useEffect(() => {
+    dispatch(fetchDoctors({ pageNumber: currentPage, pageSize: 12 }));
+  }, [dispatch, currentPage]);
+
+  const handlePageChange = (page) => {
+    dispatch(fetchDoctors({ pageNumber: page, pageSize: 12 }));
+  };
 
   if (loading) {
     return (
@@ -23,7 +36,7 @@ const DoctorsList = () => {
   }
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-0 py-6 flex justify-center">
+    <div className="w-full px-4 sm:px-6 lg:px-0 py-6 flex flex-col items-center">
       <div
         className="
           grid 
@@ -65,6 +78,13 @@ const DoctorsList = () => {
           );
         })}
       </div>
+
+      {/* pagination */}
+      <PaginationControls
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
     </div>
   );
 };
