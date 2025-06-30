@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import MedicalTourismHeader from "./components/MedicalTourismHeader/MedicalTourismHeader";
 import SpecializationList from "./components/SpecializationList/SpecializationList";
 import DoctorsList from "./components/DoctorsList/DoctorsList";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -23,6 +24,9 @@ const App = () => {
           </div>
         </div>
       </div>
+
+      {/* footer */}
+      <Footer />
     </>
   );
 };

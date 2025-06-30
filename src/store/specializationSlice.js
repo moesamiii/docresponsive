@@ -6,7 +6,7 @@ export const fetchSpecializations = createAsyncThunk(
   "specializations/fetchAll",
   async () => {
     const response = await axios.get(
-      "https://newulmmed.com/api/Specialization/GetAll?page=1&pageSize=16"
+      "https://test.newulmmed.com/api/Specialization/GetAll?page=1&pageSize=16"
     );
     return Array.isArray(response.data.data) ? response.data.data : [];
   }
