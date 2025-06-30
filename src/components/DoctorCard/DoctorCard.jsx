@@ -1,8 +1,6 @@
 import React from "react";
 import docsImage from "../../assets/docsimage.png";
-{
-  /* this component recive props from parent component from . map in doctor list  */
-}
+
 const DoctorCard = ({
   name,
   specialization,
@@ -12,14 +10,10 @@ const DoctorCard = ({
 }) => {
   const isArabic = language === "ar";
   const shortName = name?.split(" ").slice(0, 2).join(" ");
-  {
-    /* join put them together  */
-  }
 
-  // this is to make handling the error of broken images
   const handleImageError = (e) => {
-    e.target.onerror = null; // prevent infinite loop LOL HAHAHAHAHAHHAHAHAHAHAHHAHAHA
-    e.target.src = docsImage; // on error replaces the broken image with default internal image
+    e.target.onerror = null;
+    e.target.src = docsImage;
   };
 
   return (
@@ -37,9 +31,6 @@ const DoctorCard = ({
         </div>
       </div>
 
-      {/* relative to make the star stay inside the box , overflow hidden to make image content inside rounded box   */}
-
-      {/* text content - fixed direction and alignment */}
       <div
         className={`flex flex-col w-full px-1 ${
           isArabic ? "text-right" : "text-left"
@@ -61,7 +52,6 @@ const DoctorCard = ({
         </span>
       </div>
 
-      {/* this is the vieW more button  */}
       <button
         className="w-full h-[40px] border border-[#0798F1] rounded-[8px] text-[#0798F1] font-medium text-[16px] sm:text-[18px] flex items-center justify-center"
         style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}

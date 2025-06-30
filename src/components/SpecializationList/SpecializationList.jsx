@@ -76,8 +76,8 @@ const SpecializationList = () => {
       >
         {/* all doctors button */}
         <button
-          className={`w-full h-[40px] bg-[#F3FAFE] rounded-[8px] flex items-center justify-between px-3 mb-2 ${
-            isArabic ? "flex-row-reverse" : ""
+          className={`w-full h-[40px] bg-[#F3FAFE] rounded-[8px] flex items-center  px-3 mb-2 ${
+            isArabic ? "" : ""
           }`}
           onClick={() => {
             dispatch(fetchDoctors());
@@ -100,7 +100,7 @@ const SpecializationList = () => {
           </svg>
 
           <span
-            className="text-[#0798F1] font-medium text-[18px]"
+            className="text-[#0798F1] font-medium text-[18px] px-[10px]"
             style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
           >
             {isArabic ? "الكل" : "All"}

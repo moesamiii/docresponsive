@@ -41,7 +41,6 @@ const MedicalTourismHeader = () => {
             </div>
           </div>
 
-          {/* instruction + search section - always on right in english, left in Arabic */}
           <div
             className={`flex items-center gap-2 order-2 ${
               isArabic ? "order-1" : "order-2"

@@ -2,9 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import DoctorCard from "../DoctorCard/DoctorCard";
 
-{
-  /*  take data from  redux store  under this comment */
-}
 const DoctorsList = () => {
   const { doctors, loading, error } = useSelector((state) => state.doctors);
   const currentLang = useSelector((state) => state.language.current);
@@ -41,7 +38,6 @@ const DoctorsList = () => {
           w-full
         "
       >
-        {/* loop through doctors and return cards */}
         {doctors.map((item) => {
           const doctor = item.doctor.doctorPersonalInfo;
 
