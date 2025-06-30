@@ -13,12 +13,10 @@ const App = () => {
 
       <div className="flex justify-center mt-4">
         <div className="flex flex-col md:flex-row gap-4 max-w-[1440px] w-full px-4">
-          {/* sidebar special */}
           <div className="w-full md:w-[230px]">
             <SpecializationList />
           </div>
 
-          {/* docs list */}
           <div className="flex-1">
             <DoctorsList />
           </div>

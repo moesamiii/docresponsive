@@ -5,7 +5,6 @@ const PaginationControls = ({ currentPage, totalPages, onPageChange }) => {
 
   return (
     <div className="flex justify-center items-center gap-[8px] mt-8 flex-wrap">
-      {/* Prev */}
       <button
         disabled={currentPage === 1}
         onClick={() => onPageChange(currentPage - 1)}
@@ -14,7 +13,6 @@ const PaginationControls = ({ currentPage, totalPages, onPageChange }) => {
         →
       </button>
 
-      {/* Pages */}
       {pageNumbers.map((page) => (
         <button
           key={page}
@@ -30,7 +28,6 @@ const PaginationControls = ({ currentPage, totalPages, onPageChange }) => {
         </button>
       ))}
 
-      {/* Next */}
       <button
         disabled={currentPage === totalPages}
         onClick={() => onPageChange(currentPage + 1)}

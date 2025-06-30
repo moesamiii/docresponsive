@@ -18,7 +18,6 @@ const DoctorCard = ({
 
   return (
     <div className="w-full max-w-[240px] flex flex-col gap-2">
-      {/* img container */}
       <div className="w-full h-[186.25px] bg-[#023554] rounded-[9.38px] relative overflow-hidden">
         <img
           src={image || docsImage}

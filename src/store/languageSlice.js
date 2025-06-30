@@ -3,11 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const languageSlice = createSlice({
   name: "language",
   initialState: {
-    current: "ar", //  on the default way ists arabic
+    current: "ar",
   },
   reducers: {
     setLanguage: (state, action) => {
-      state.current = action.payload; // arbic or english
+      state.current = action.payload;
     },
   },
 });

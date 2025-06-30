@@ -29,7 +29,7 @@ const specializationSlice = createSlice({
     list: [],
     loading: false,
     error: null,
-    selected: null, // التخصص الحالي من api
+    selected: null,
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -47,7 +47,6 @@ const specializationSlice = createSlice({
         state.error = action.error.message;
       })
 
-      // تحميل تخصص
       .addCase(fetchSpecializationById.pending, (state) => {
         state.loading = true;
         state.error = null;

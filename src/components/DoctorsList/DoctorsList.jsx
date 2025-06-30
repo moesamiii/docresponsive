@@ -79,7 +79,6 @@ const DoctorsList = () => {
         })}
       </div>
 
-      {/* pagination */}
       <PaginationControls
         currentPage={currentPage}
         totalPages={totalPages}

@@ -21,10 +21,11 @@ const MedicalTourismHeader = () => {
             <img
               src={arrowImage}
               alt={isArabic ? "Arrow Right" : "Arrow Left"}
-              className={`w-[12px] h-[24px] object-contain ${
+              className={`w-[12px] h-[24px] object-contain -mt-6 ${
                 isArabic ? "rotate-[270deg]" : "rotate-90"
               }`}
             />
+
             <div className="flex flex-col">
               <span
                 className="text-[14px] sm:text-[16px] md:text-[18px] font-medium text-[#6F6F6F]"
@@ -42,7 +43,7 @@ const MedicalTourismHeader = () => {
           </div>
 
           <div
-            className={`flex items-center gap-2 order-2 ${
+            className={`flex items-center gap-2  order-2 ${
               isArabic ? "order-1" : "order-2"
             }`}
           >

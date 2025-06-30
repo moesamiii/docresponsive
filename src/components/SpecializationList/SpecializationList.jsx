@@ -27,8 +27,7 @@ const SpecializationList = () => {
 
   return (
     <>
-      {/* === mobile toggle btn === */}
-      <div className="md:hidden w-full px-4 mb-2">
+      <div className="md:hidden w-full px-4 ">
         <button
           className="w-full bg-[#023554] text-white rounded-md px-4 py-2 flex justify-between items-center"
           onClick={() => dispatch(toggleSpecialization())}
@@ -58,7 +57,6 @@ const SpecializationList = () => {
         </button>
       </div>
 
-      {/*  specialization list panel  */}
       <div
         className={`
           bg-[#023554]
@@ -74,7 +72,6 @@ const SpecializationList = () => {
           max-h-[500px] md:max-h-none
         `}
       >
-        {/* all doctors button */}
         <button
           className={`w-full h-[40px] bg-[#F3FAFE] rounded-[8px] flex items-center  px-3 mb-2 ${
             isArabic ? "" : ""
@@ -107,11 +104,9 @@ const SpecializationList = () => {
           </span>
         </button>
 
-        {/* content states */}
         {loading && <p className="text-white text-center">تحميل...</p>}
         {error && <p className="text-red-500 text-center">خطأ: {error}</p>}
 
-        {/* list items */}
         {Array.isArray(list) && list.length > 0
           ? list.map((item) => {
               const name = isArabic ? item.ar_Name : item.en_Name;

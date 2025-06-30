@@ -17,7 +17,6 @@ const Footer = () => {
     <footer className="w-full bg-[#111827] px-[85px] pt-[64px] pb-[64px]">
       <div className="w-full max-w-[1280px] px-4 mx-auto gap-[36px]">
         <div className="w-[1248px] h-[292px] flex gap-[70px]">
-          {/* Column 1 - Logo + Description + Icons */}
           <div className="w-[288px] h-[292px] flex flex-col gap-[24px]">
             <img
               src={footerLogo}
@@ -59,7 +58,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 2 - Company Info */}
           <div className="w-[288px] h-[292px] flex flex-col gap-[24px]">
             <div
               className="w-[288px] h-[28px] text-[18px] leading-[28px] font-bold text-right text-white"
@@ -110,7 +108,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 4 - Contact */}
           <div className="w-[288px] h-[292px] flex flex-col gap-[24px]">
             <div
               className="w-[288px] h-[28px] text-[18px] leading-[28px] font-bold text-right text-white"
@@ -173,7 +170,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* ✅ Bottom Bar */}
         <div className="w-full border-t border-[#1F2937] mt-[40px] pt-[24px] flex justify-between items-center">
           <div
             className="text-[14px] font-normal text-[#9CA3AF]"
