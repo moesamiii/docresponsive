@@ -25,7 +25,7 @@ const Footer = () => {
             />
             <div
               className="w-[288px] h-[72px] text-[16px] leading-[24px] font-normal text-right text-[#9CA3AF]"
-              style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
+             
             >
               نقدم خدمات طبية متميزة بأعلى معايير الجودة والرفاهية، نجلب الرعاية
               الصحية المتكاملة إلى منزلك.

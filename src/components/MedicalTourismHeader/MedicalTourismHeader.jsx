@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import arrowImage from "../../assets/weui_arrow-filled.png";
-import mokIcon from "../../assets/mok.png";
-import infoIcon from "../../assets/info-icon.png";
+// import mokIcon from "../../assets/mok.png";
+// import infoIcon from "../../assets/info-icon.png";
 
 const MedicalTourismHeader = () => {
   const currentLang = useSelector((state) => state.language.current);
@@ -37,7 +37,7 @@ const MedicalTourismHeader = () => {
                 className="text-[18px] sm:text-[20px] md:text-[24px] font-semibold text-[#222222]"
                 style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
               >
-                {isArabic ? "الأطباء" : "Doctors & Centers"}
+                {isArabic ? "تفاصيل العملية " : "Doctors & Centers"}
               </h1>
             </div>
           </div>
@@ -47,17 +47,18 @@ const MedicalTourismHeader = () => {
               isArabic ? "order-1" : "order-2"
             }`}
           >
-            {/* search Icon */}
+            {/*  
             <div className="w-[45px] h-[40px] bg-[#023554] rounded-[8px] flex items-center justify-center cursor-pointer">
               <img
                 src={mokIcon}
                 alt="Search"
                 className="w-[21px] h-[27px] object-contain"
               />
-            </div>
+            </div>. */}
 
             {/* instruction Box */}
-            <div className="flex items-center gap-2 px-4 md:px-5 py-1.5 rounded-[8px] bg-[#023554]">
+
+            {/*.   <div className="flex items-center gap-2 px-4 md:px-5 py-1.5 rounded-[8px] bg-[#023554]">
               {isArabic ? (
                 <>
                   <span
@@ -87,7 +88,7 @@ const MedicalTourismHeader = () => {
                   </span>
                 </>
               )}
-            </div>
+            </div>  */}
           </div>
         </div>
       </div>
