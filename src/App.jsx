@@ -14,7 +14,6 @@ const App = () => {
       <HeartContainer />
 
       <DoctorList2 />
-      <DoctorList2 />
 
       <div className="w-full flex justify-center my-6">
         <button
