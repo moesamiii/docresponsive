@@ -12,7 +12,7 @@ const DoctorCard2 = () => {
           className="w-[365px] min-h-[128px] bg-[#FEFEFE] rounded-[16px] border border-[#E0E0E0] p-4 flex flex-col gap-[10px] shadow-sm"
           dir="rtl"
         >
-          <div className="relative flex w-full items-start">
+          <div className="relative flex w-full items-start" dir="ltr">
             <div className="absolute right-0 top-0">
               <img
                 src={doctorImg}
@@ -21,7 +21,7 @@ const DoctorCard2 = () => {
               />
             </div>
 
-            <div className="w-full flex flex-col items-center text-center gap-[4px] pr-[72px]">
+            <div className="w-full flex flex-col items-end text-right gap-[4px] pr-[72px]">
               <h2 className="text-[20px] font-semibold text-[#222222] leading-[32px]">
                 د/ محمد أحمد الخالدي
               </h2>
@@ -30,7 +30,7 @@ const DoctorCard2 = () => {
                 استشاري جراحة القلب والصدر سعودي
               </p>
 
-              <p className="text-[14px] text-[#4F4F4F] leading-[21px] flex items-center justify-end gap-[4px] text-right">
+              <p className="text-[14px] text-[#4F4F4F] leading-[21px] flex flex-row-reverse items-center gap-[4px]">
                 <img
                   src={experienceIcon}
                   alt="exp"
@@ -39,7 +39,7 @@ const DoctorCard2 = () => {
                 خبرة 15 عام
               </p>
 
-              <p className="text-[14px] text-[#00598F] leading-[21px] flex items-center justify-center gap-[4px] font-medium">
+              <p className="text-[14px] text-[#00598F] leading-[21px] flex flex-row-reverse items-center gap-[4px] font-medium">
                 <img
                   src={locationIcon}
                   alt="location"
