@@ -84,7 +84,7 @@ const HeartContainer = () => {
               {[1, 2, 3, 4].map((_, i) => (
                 <div
                   key={i}
-                  className="w-[132px] h-[116.58px] rounded-[8px] p-[8px] border border-dashed border-[1px] flex items-center justify-center"
+                  className="w-[132px] h-[116.58px] rounded-[8px] p-[8px] border border-dashed border-gray-400 border-[1px] flex items-center justify-center"
                 >
                   <img
                     src={icu}
