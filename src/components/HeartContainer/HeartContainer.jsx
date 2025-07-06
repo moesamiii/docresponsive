@@ -4,6 +4,8 @@ import i1 from "../../assets/i1.png";
 import hand from "../../assets/hand.png";
 import star from "../../assets/star.png";
 import icu from "../../assets/icu.png";
+import leftArrow from "../../assets/leftarrow.png";
+import rightArrow from "../../assets/rightarrow.png";
 
 const HeartContainer = () => {
   return (
@@ -85,6 +87,17 @@ const HeartContainer = () => {
                     1/5
                   </div>
                 </div>
+
+                <div className="absolute left-2 top-1/2 transform -translate-y-1/2 z-50">
+                  <button>
+                    <img src={leftArrow} alt="Left" className="w-8 h-8" />
+                  </button>
+                </div>
+                <div className="absolute right-2 top-1/2 transform -translate-y-1/2 z-50">
+                  <button>
+                    <img src={rightArrow} alt="Right" className="w-8 h-8" />
+                  </button>
+                </div>
               </div>
 
               <div className="w-[552px] h-[116.58px] flex gap-[8px]">
@@ -120,6 +133,17 @@ const HeartContainer = () => {
             <div className="bg-black/60 text-white text-xs px-2 py-1 rounded-md font-semibold border border-white">
               1/5
             </div>
+          </div>
+
+          <div className="absolute left-2 top-1/2 transform -translate-y-1/2 z-50">
+            <button>
+              <img src={leftArrow} alt="Left" className="w-8 h-8" />
+            </button>
+          </div>
+          <div className="absolute right-2 top-1/2 transform -translate-y-1/2 z-50">
+            <button>
+              <img src={rightArrow} alt="Right" className="w-8 h-8" />
+            </button>
           </div>
 
           <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
@@ -205,12 +229,6 @@ const HeartContainer = () => {
               <li>تجهيزات طبية حديثة</li>
               <li>متابعة طبية مستمرة</li>
             </ul>
-          </div>
-
-          <div className="flex justify-center mt-6">
-            <div className="text-sm text-gray-500 bg-white rounded-full px-4 py-1">
-              1/5
-            </div>
           </div>
         </div>
       </div>
