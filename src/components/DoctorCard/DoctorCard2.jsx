@@ -64,7 +64,6 @@ const DoctorCard2 = () => {
         </div>
       </div>
 
-      {/* Mobile View */}
       <div className="md:hidden w-full bg-[#FEFEFE] rounded-[16px] border border-[#E0E0E0] p-4 shadow-sm">
         <div className="flex flex-row-reverse gap-4">
           {/* Doctor Image */}
@@ -76,7 +75,6 @@ const DoctorCard2 = () => {
             />
           </div>
 
-          {/* Doctor Info */}
           <div className="flex-1">
             <h2 className="text-[18px] font-semibold text-[#222222] text-right">
               د/ محمد أحمد الخالدي

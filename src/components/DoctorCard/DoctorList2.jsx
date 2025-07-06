@@ -4,10 +4,9 @@ import DoctorCard2 from "./DoctorCard2";
 const DoctorList2 = () => {
   return (
     <>
-      {/* Web View (unchanged) */}
       <div className="hidden md:block">
         <div
-          className="w-[1281px] rounded-[16px] p-[50px] bg-[#F6F7F8] opacity-100 mx-auto"
+          className="w-[1281px] rounded-[16px] p-[24px] bg-[#F6F7F8] opacity-100 mx-auto"
           dir="rtl"
         >
           <h2 className="w-[1223px] h-[36px] text-[24px] font-semibold text-[#222222] leading-[100%] text-right">
@@ -30,7 +29,6 @@ const DoctorList2 = () => {
         </div>
       </div>
 
-      {/* Mobile View (new) */}
       <div className="md:hidden p-4">
         <h2 className="text-2xl font-semibold text-[#222222] text-right mb-6">
           اختر طبيبك المختص
