@@ -57,10 +57,10 @@ const HeartContainer = () => {
                 </ul>
               </div>
 
-              <div className="w-[422px] h-[156px] pt-[15px] opacity-100 rotate-0 flex flex-col gap-[16px]">
+              <div className="w-[422px] h-[156px]   opacity-100 rotate-0 flex flex-col gap-[16px]">
                 <div className="flex items-center justify-end gap-[4px] w-[135.58px] h-[20px] opacity-100 rotate-0">
                   <img src={star} alt="hand" className="w-[16px] h-[16px]" />
-                  <p className="w-[116.92px] h-[20px] text-[20px] leading-[24px] font-medium text-right align-middle">
+                  <p className="w-[116.92px]  h-[20px] text-[20px] leading-[24px] font-medium text-right align-middle">
                     المميزات
                   </p>
                 </div>
