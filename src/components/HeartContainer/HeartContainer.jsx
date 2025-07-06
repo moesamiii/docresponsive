@@ -130,7 +130,7 @@ const HeartContainer = () => {
           </div>
 
           <div className="mb-6">
-            <div className="flex items-center justify-end gap-2 mb-3">
+            <div className="flex items-center justify-start gap-2 mb-3">
               <img src={i1} alt="icon" className="w-5 h-5" />
               <h3 className="text-xl font-medium">عن العملية</h3>
             </div>
