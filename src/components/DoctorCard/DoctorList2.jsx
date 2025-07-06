@@ -12,7 +12,7 @@ const DoctorList2 = () => {
       </h2>
 
       <div className="w-full pt-[16px] max-h-[580px] overflow-y-auto">
-        <div className="grid grid-cols-3 gap-[4px]">
+        <div className="grid grid-cols-3 gap-[4px] px-[15px]">
           <DoctorCard2 />
           <DoctorCard2 />
           <DoctorCard2 />
