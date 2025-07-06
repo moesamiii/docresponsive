@@ -15,7 +15,7 @@ const DoctorCard2 = () => {
           <img
             src={doctorImg}
             alt="doctor"
-            className="w-[64px] h-[64px] rounded-[16px] border border-[#B2DFFB] object-cover"
+            className="w-[64px] h-[64px] rounded-[16px]  object-cover"
           />
         </div>
 
