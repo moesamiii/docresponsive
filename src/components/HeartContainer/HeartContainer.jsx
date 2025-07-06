@@ -142,9 +142,23 @@ const HeartContainer = () => {
           </div>
 
           <div className="mb-6">
-            <div className="flex items-center justify-end gap-2 mb-3">
-              <img src={hand} alt="hand" className="w-5 h-5" />
-              <h3 className="text-xl font-medium">تعليمات</h3>
+            <div
+              className="flex items-center justify-end gap-2 mb-3"
+              dir="rtl"
+              style={{ textAlign: "right", direction: "rtl" }}
+            >
+              <img
+                src={hand}
+                alt="hand"
+                className="w-5 h-5"
+                style={{ order: 1 }}
+              />
+              <h3
+                className="text-xl font-medium"
+                style={{ order: 2, marginLeft: "auto" }}
+              >
+                تعليمات
+              </h3>
             </div>
             <ul className="text-right text-base leading-relaxed list-disc pr-5 space-y-2">
               <li>الصيام 12 ساعة قبل العملية</li>
@@ -155,9 +169,23 @@ const HeartContainer = () => {
           </div>
 
           <div className="mb-4">
-            <div className="flex items-center justify-end gap-2 mb-3">
-              <img src={star} alt="star" className="w-5 h-5" />
-              <h3 className="text-xl font-medium">المميزات</h3>
+            <div
+              className="flex items-center justify-end gap-2 mb-3"
+              dir="rtl"
+              style={{ textAlign: "right", direction: "rtl" }}
+            >
+              <img
+                src={star}
+                alt="star"
+                className="w-5 h-5"
+                style={{ order: 1 }}
+              />
+              <h3
+                className="text-xl font-medium"
+                style={{ order: 2, marginLeft: "auto" }}
+              >
+                المميزات
+              </h3>
             </div>
             <ul className="text-right text-base leading-relaxed list-disc pr-5 space-y-2">
               <li>فريق طبي متخصص</li>

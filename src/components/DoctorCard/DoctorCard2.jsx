@@ -65,25 +65,14 @@ const DoctorCard2 = () => {
       </div>
 
       <div className="md:hidden w-full bg-[#FEFEFE] rounded-[16px] border border-[#E0E0E0] p-4 shadow-sm">
-        <div className="flex flex-row-reverse gap-4">
-          {/* Doctor Image */}
-          <div className="flex-shrink-0">
-            <img
-              src={doctorImg}
-              alt="doctor"
-              className="w-[64px] h-[64px] rounded-[16px] object-cover"
-            />
-          </div>
-
-          <div className="flex-1">
+        <div className="flex flex-row gap-4" dir="rtl">
+          <div className="flex-1 order-2">
             <h2 className="text-[18px] font-semibold text-[#222222] text-right">
               د/ محمد أحمد الخالدي
             </h2>
-
             <p className="text-[14px] text-[#4F4F4F] text-right mt-1">
               استشاري جراحة القلب والصدر سعودي
             </p>
-
             <div className="flex flex-col gap-1 mt-2">
               <p className="text-[14px] text-[#4F4F4F] flex items-center justify-end gap-2 text-right">
                 <img
@@ -93,7 +82,6 @@ const DoctorCard2 = () => {
                 />
                 خبرة 15 عام
               </p>
-
               <p className="text-[14px] text-[#00598F] flex items-center justify-end gap-2 font-medium text-right">
                 <img
                   src={locationIcon}
@@ -104,8 +92,16 @@ const DoctorCard2 = () => {
               </p>
             </div>
           </div>
-        </div>
 
+          <div className="flex-shrink-0 order-1" style={{ marginLeft: "auto" }}>
+            <img
+              src={doctorImg}
+              alt="doctor"
+              className="w-[64px] h-[64px] rounded-[16px] object-cover"
+              style={{ display: "block", marginLeft: "auto" }}
+            />
+          </div>
+        </div>
         <p className="text-[14px] text-[#333] leading-[22px] mt-3 text-right">
           د.محمد أحمد الخالدي هو استشاري في طب جراحة القلب والصدر يتمتع بخبرة
           تزيد عن 20 سنة في إجراء عمليات القلب المفتوح وجراحات الشرايين التاجية،
