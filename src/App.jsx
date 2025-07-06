@@ -15,8 +15,8 @@ const App = () => {
 
       <DoctorList2 />
 
-      <div className="w-full flex justify-center my-6">
-        <button className="w-[504px] h-[52px] bg-[#0798F1] text-white text-[18px] font-medium leading-[100%] rounded-[8px] px-[22px] py-[6px]">
+      <div className="w-full flex justify-center my-6 px-4">
+        <button className="w-full max-w-[504px] h-[52px] bg-[#0798F1] text-white text-[16px] sm:text-[16px] font-medium leading-[100%] rounded-[8px] px-[22px] py-[6px]">
           احجز العملية
         </button>
       </div>

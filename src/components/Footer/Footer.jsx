@@ -209,18 +209,22 @@ const Footer = () => {
 
       <div className="md:hidden w-full bg-[#111827] px-5 py-8">
         <div className="flex flex-col gap-8">
-          <div className="flex flex-col items-center gap-4">
+          <div
+            className="w-full flex flex-col items-start gap-4 text-right"
+            dir="rtl"
+          >
             <img
               src={footerLogo}
               alt="Footer Logo"
               className="w-[131.54px] h-[36px]"
             />
-            <p className="text-center text-[#9CA3AF] text-sm">
+
+            <p className="text-[#9CA3AF] text-sm max-w-[400px]">
               نقدم خدمات طبية متميزة بأعلى معايير الجودة والرفاهية، نجلب الرعاية
               الصحية المتكاملة إلى منزلك.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-2">
+            <div className="w-full flex flex-wrap justify-start gap-2">
               {[
                 facebookIcon,
                 linkedinIcon,

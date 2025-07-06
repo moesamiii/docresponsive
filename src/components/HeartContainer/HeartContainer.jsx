@@ -73,12 +73,18 @@ const HeartContainer = () => {
               </div>
             </div>
             <div className="w-[551px] h-[575.58px] opacity-100 rotate-0 flex flex-col gap-[8px]">
-              <div className="w-[551px] h-[451px] pt-[8px] pb-[8px]">
+              <div className="w-[551px] h-[451px] pt-[8px] pb-[8px] relative">
                 <img
                   src={icu}
                   alt="doc"
                   className="w-full h-full object-cover rounded-[16px]"
                 />
+
+                <div className="absolute top-3 right-3 z-50 flex flex-col items-center space-y-1 pt-[15px] pr-[10px]">
+                  <div className="bg-black/60 text-white text-xs px-2 py-1 rounded-md font-semibold border border-white">
+                    1/5
+                  </div>
+                </div>
               </div>
 
               <div className="w-[552px] h-[116.58px] flex gap-[8px]">
@@ -109,6 +115,13 @@ const HeartContainer = () => {
               className="w-full h-full object-cover"
             />
           </div>
+
+          <div className="absolute top-3 right-3 z-50 flex flex-col items-center space-y-1">
+            <div className="bg-black/60 text-white text-xs px-2 py-1 rounded-md font-semibold border border-white">
+              1/5
+            </div>
+          </div>
+
           <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
             {[1, 2, 3, 4, 5].map((item) => (
               <div
