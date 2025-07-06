@@ -7,10 +7,7 @@ const DoctorList2 = () => {
       className="w-[1281px] rounded-[16px] p-[16px] bg-[#F6F7F8]  opacity-100 mx-auto"
       dir="rtl"
     >
-      <h2
-        className="w-[1223px] h-[36px] text-[24px] font-semibold text-[#222222] leading-[100%] text-right"
-        style={{ fontFamily: "IBM Plex Sans Arabic" }}
-      >
+      <h2 className="w-[1223px] h-[36px] text-[24px] font-semibold text-[#222222] leading-[100%] text-right">
         اختر طبيبك المختص
       </h2>
 
