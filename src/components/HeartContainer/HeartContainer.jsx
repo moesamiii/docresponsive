@@ -17,7 +17,7 @@ const HeartContainer = () => {
                   <img src={h1} alt="h1" />
                 </div>
 
-                <p className="w-[378px] h-[48px] pt-[20px] text-[32px] leading-[100%] font-bold text-black/80 text-right">
+                <p className="w-[378px] h-[48px] pt-[20px] text-[32px] leading-[100%] font-bold text-black/80 text-right ">
                   عملية القلب المفتوح
                 </p>
               </div>
@@ -34,7 +34,7 @@ const HeartContainer = () => {
                     عن العملية
                   </p>
                 </div>
-                <p className="w-[501px] h-[81px] text-[20px] leading-[27px] font-normal text-right align-middle">
+                <p className="w-[501px] h-[81px] text-[20px] leading-[27px] font-normal text-right align-middle text-[#686767]">
                   عملية القلب المفتوح هي إجراء جراحي كبير يتم فيه فتح الصدر
                   للوصول إلى القلب لعلاج مشاكل الشرايين التاجية أو صمامات القلب.
                   تستغرق العملية من 3 إلى 6 ساعات تحت التخدير العام الكامل.
@@ -49,7 +49,7 @@ const HeartContainer = () => {
                   </p>
                 </div>
 
-                <ul className="w-[422px] h-[120px] text-[20px] leading-[30px] font-normal text-right align-middle list-disc pr-5">
+                <ul className="w-[422px] h-[120px] text-[20px] leading-[30px] font-normal text-right align-middle list-disc pr-5 text-[#686767]">
                   <li>الصيام 12 ساعة قبل العملية</li>
                   <li>إجراء تحاليل شاملة وأشعة</li>
                   <li>إيقاف أدوية السيولة قبل أسبوع</li>
@@ -65,7 +65,7 @@ const HeartContainer = () => {
                   </p>
                 </div>
 
-                <ul className="w-[422px] h-[120px] text-[20px] leading-[30px] font-normal text-right align-middle list-disc pr-5">
+                <ul className="w-[422px] h-[120px] text-[20px] leading-[30px] font-normal text-right align-middle list-disc pr-5 text-[#686767]">
                   <li>فريق طبي متخصص</li>
                   <li>تجهيزات طبية حديثة</li>
                   <li>متابعة طبية مستمرة</li>
