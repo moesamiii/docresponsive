@@ -15,7 +15,6 @@ import locationIcon from "../../assets/leftfooterlocation.png";
 const Footer = () => {
   return (
     <>
-      {/* Original Web View (completely unchanged) */}
       <div className="hidden md:block">
         <footer className="w-full bg-[#111827] px-[85px] pt-[64px] pb-[64px]">
           <div className="w-full max-w-[1280px] px-4 mx-auto gap-[36px]">
@@ -208,10 +207,8 @@ const Footer = () => {
         </footer>
       </div>
 
-      {/* New Mobile View (added at the end) */}
       <div className="md:hidden w-full bg-[#111827] px-5 py-8">
         <div className="flex flex-col gap-8">
-          {/* Logo and Description */}
           <div className="flex flex-col items-center gap-4">
             <img
               src={footerLogo}
@@ -223,7 +220,6 @@ const Footer = () => {
               الصحية المتكاملة إلى منزلك.
             </p>
 
-            {/* Social Icons */}
             <div className="flex flex-wrap justify-center gap-2">
               {[
                 facebookIcon,
@@ -245,7 +241,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Company Links */}
           <div className="flex flex-col gap-3">
             <h3 className="text-white font-bold text-lg text-right">الشركة</h3>
             {["من نحن ؟", "أنضم الينا", "الدعم", "أسئلة و أجوبة"].map(
@@ -257,7 +252,6 @@ const Footer = () => {
             )}
           </div>
 
-          {/* Services Links */}
           <div className="flex flex-col gap-3">
             <h3 className="text-white font-bold text-lg text-right">خدماتنا</h3>
             {[
@@ -273,7 +267,6 @@ const Footer = () => {
             ))}
           </div>
 
-          {/* Contact Info */}
           <div className="flex flex-col gap-3">
             <h3 className="text-white font-bold text-lg text-right">
               تواصل معنا
@@ -297,7 +290,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Footer Bottom */}
           <div className="flex flex-col items-center gap-4 pt-6 border-t border-[#1F2937] mt-4">
             <div className="flex gap-6">
               <p className="text-[#9CA3AF] text-xs">سياسة الخصوصية</p>
