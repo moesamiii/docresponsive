@@ -9,7 +9,7 @@ const HeartContainer = () => {
   return (
     <>
       {/* webview */}
-      <div className="hidden md:flex w-full justify-center pt-[40px] mb-[25px]">
+      <div className="hidden md:flex w-full justify-center pt-[0px]] mb-[25px]">
         <div className="w-[1281px] opacity-100 gap-[24px] top-[278px] left-[79px] rotate-0">
           <div className="flex flex-row w-[1281px] h-[579px] rounded-[16px] opacity-100 gap-[32px] rotate-0">
             <div className="flex flex-col w-[697px] h-[579px] rounded-[16px] opacity-100 gap-[24px] p-[16px] bg-[#F6F7F8] rotate-0">

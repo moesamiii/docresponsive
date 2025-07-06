@@ -7,7 +7,6 @@ import locationIcon from "../../assets/location.png";
 const DoctorCard2 = () => {
   return (
     <>
-      {/* Web View (unchanged) */}
       <div className="hidden md:block">
         <div
           className="w-[365px] min-h-[128px] bg-[#FEFEFE] rounded-[16px] border border-[#E0E0E0] p-4 flex flex-col gap-[10px] shadow-sm"

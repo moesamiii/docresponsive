@@ -12,7 +12,6 @@ const MedicalTourismHeader = () => {
     <div className="w-full bg-white px-4 sm:px-6 lg:px-10 py-4 md:py-6">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="flex justify-between items-center flex-wrap gap-4">
-          {/*  back + title section  always on left in english and right in Arabic */}
           <div
             className={`flex items-center gap-2 order-1 ${
               isArabic ? "order-2 text-right" : "order-1 text-left"
