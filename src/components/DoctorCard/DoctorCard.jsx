@@ -35,27 +35,15 @@ const DoctorCard = ({
           isArabic ? "text-right" : "text-left"
         }`}
       >
-        <span
-          className="text-[#222222] font-medium text-[16px] sm:text-[18px]"
-          style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
-          dir={isArabic ? "rtl" : "ltr"}
-        >
+        <span className="text-[#222222] font-medium text-[16px] sm:text-[18px]">
           {shortName}
         </span>
-        <span
-          className="text-[#686767] text-[14px] sm:text-[16px] leading-[160%]"
-          style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
-          dir={isArabic ? "rtl" : "ltr"}
-        >
+        <span className="text-[#686767] text-[14px] sm:text-[16px] leading-[160%]">
           {specialization}
         </span>
       </div>
 
-      <button
-        className="w-full h-[40px] border border-[#0798F1] rounded-[8px] text-[#0798F1] font-medium text-[16px] sm:text-[18px] flex items-center justify-center"
-        style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
-        dir={isArabic ? "rtl" : "ltr"}
-      >
+      <button className="w-full h-[40px] border border-[#0798F1] rounded-[8px] text-[#0798F1] font-medium text-[16px] sm:text-[18px] flex items-center justify-center">
         {isArabic ? "عرض المزيد" : "View More"}
       </button>
     </div>

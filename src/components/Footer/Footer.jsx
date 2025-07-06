@@ -100,9 +100,6 @@ const Footer = () => {
                     <div
                       key={index}
                       className="text-[16px] leading-[24px] font-normal text-right text-[#9CA3AF]"
-                      style={{
-                        fontFamily: '"IBM Plex Sans Arabic", sans-serif',
-                      }}
                     >
                       {service}
                     </div>
@@ -111,10 +108,7 @@ const Footer = () => {
               </div>
 
               <div className="w-[288px] h-[292px] flex flex-col gap-[24px]">
-                <div
-                  className="w-[288px] h-[28px] text-[18px] leading-[28px] font-bold text-right text-white"
-                  style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
-                >
+                <div className="w-[288px] h-[28px] text-[18px] leading-[28px] font-bold text-right text-white">
                   تواصل معنا
                 </div>
 
@@ -141,12 +135,7 @@ const Footer = () => {
                       alt="Mail Icon"
                       className="w-[16px] h-[16px]"
                     />
-                    <p
-                      className="text-[16px] leading-[24px] font-normal text-[#9CA3AF] text-right flex-1"
-                      style={{
-                        fontFamily: '"IBM Plex Sans Arabic", sans-serif',
-                      }}
-                    >
+                    <p className="text-[16px] leading-[24px] font-normal text-[#9CA3AF] text-right flex-1">
                       info@ulmcare.jo
                     </p>
                   </div>
@@ -166,12 +155,7 @@ const Footer = () => {
                       >
                         Wasfi AlTal St. P.O. Box. 5873
                       </p>
-                      <p
-                        className="text-[16px] leading-[24px] font-normal text-[#9CA3AF]"
-                        style={{
-                          fontFamily: '"IBM Plex Sans Arabic", sans-serif',
-                        }}
-                      >
+                      <p className="text-[16px] leading-[24px] font-normal text-[#9CA3AF]">
                         Amman - 11953 Jordan
                       </p>
                     </div>
@@ -189,16 +173,10 @@ const Footer = () => {
               </div>
 
               <div className="flex gap-[32px]">
-                <div
-                  className="text-[14px] font-normal text-[#9CA3AF] cursor-pointer hover:text-white transition"
-                  style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
-                >
+                <div className="text-[14px] font-normal text-[#9CA3AF] cursor-pointer hover:text-white transition">
                   سياسة الخصوصية
                 </div>
-                <div
-                  className="text-[14px] font-normal text-[#9CA3AF] cursor-pointer hover:text-white transition"
-                  style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
-                >
+                <div className="text-[14px] font-normal text-[#9CA3AF] cursor-pointer hover:text-white transition">
                   الشروط والأحكام
                 </div>
               </div>
