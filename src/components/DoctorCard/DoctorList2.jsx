@@ -11,13 +11,19 @@ const DoctorList2 = () => {
         اختر طبيبك المختص
       </h2>
 
-      <div className="w-full grid grid-cols-3 gap-[4px] pt-[16px]">
-        <DoctorCard2 />
-        <DoctorCard2 />
-        <DoctorCard2 />
-        <DoctorCard2 />
-        <DoctorCard2 />
-        <DoctorCard2 />
+      {/* Add scroll here */}
+      <div className="w-full pt-[16px] max-h-[580px] overflow-y-auto">
+        <div className="grid grid-cols-3 gap-[4px]">
+          <DoctorCard2 />
+          <DoctorCard2 />
+          <DoctorCard2 />
+          <DoctorCard2 />
+          <DoctorCard2 />
+          <DoctorCard2 />
+          <DoctorCard2 />
+          <DoctorCard2 />
+          <DoctorCard2 />
+        </div>
       </div>
     </div>
   );
