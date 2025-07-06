@@ -4,14 +4,14 @@ import DoctorCard2 from "./DoctorCard2";
 const DoctorList2 = () => {
   return (
     <div
-      className="w-[1281px] rounded-[16px] p-[16px] bg-[#F6F7F8] opacity-100 mx-auto"
+      className="w-[1281px] rounded-[16px] p-[50px] bg-[#F6F7F8] opacity-100 mx-auto"
       dir="rtl"
     >
       <h2 className="w-[1223px] h-[36px] text-[24px] font-semibold text-[#222222] leading-[100%] text-right">
         اختر طبيبك المختص
       </h2>
 
-      <div className="w-full grid grid-cols-3 gap-[16px] pt-[16px]">
+      <div className="w-full grid grid-cols-3 gap-[4px] pt-[16px]">
         <DoctorCard2 />
         <DoctorCard2 />
         <DoctorCard2 />
