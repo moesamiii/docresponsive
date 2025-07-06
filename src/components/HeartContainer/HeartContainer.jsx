@@ -8,7 +8,7 @@ import icu from "../../assets/icu.png";
 const HeartContainer = () => {
   return (
     <>
-      {/* Web View (unchanged) */}
+      {/* webview */}
       <div className="hidden md:flex w-full justify-center pt-[40px] mb-[25px]">
         <div className="w-[1281px] opacity-100 gap-[24px] top-[278px] left-[79px] rotate-0">
           <div className="flex flex-row w-[1281px] h-[579px] rounded-[16px] opacity-100 gap-[32px] rotate-0">
@@ -101,9 +101,9 @@ const HeartContainer = () => {
         </div>
       </div>
 
-      {/* Mobile View (updated with image slider) */}
+      {/* mobile view */}
       <div className="md:hidden w-full">
-        {/* Image Slider Section */}
+        {/* slider*/}
         <div className="relative w-full h-[250px] overflow-hidden">
           <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
             <img
@@ -124,7 +124,7 @@ const HeartContainer = () => {
           </div>
         </div>
 
-        {/* Content Section */}
+        {/* content */}
         <div className="bg-[#F6F7F8] rounded-t-2xl -mt-6 p-6 pt-8">
           <div className="flex items-center gap-4 mb-6">
             <img src={h1} alt="h1" className="w-16 h-16" />
