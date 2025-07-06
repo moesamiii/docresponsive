@@ -180,7 +180,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="w-full border-t border-[#1F2937] mt-[40px] pt-[24px] flex justify-between items-center">
+            <div className="w-full border-t border-[#1F2937]  pt-[36px] flex justify-between items-center">
               <div
                 className="text-[14px] font-normal text-[#9CA3AF]"
                 style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}

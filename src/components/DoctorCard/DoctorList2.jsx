@@ -6,14 +6,14 @@ const DoctorList2 = () => {
     <>
       <div className="hidden md:block">
         <div
-          className="w-[1281px] rounded-[16px] p-[24px] bg-[#F6F7F8] opacity-100 mx-auto"
+          className="w-[1281px] rounded-[16px] p-[16px] bg-[#F6F7F8] opacity-100 mx-auto"
           dir="rtl"
         >
           <h2 className="w-[1223px] h-[36px] text-[24px] font-semibold text-[#222222] leading-[100%] text-right">
             اختر طبيبك المختص
           </h2>
 
-          <div className="w-full pt-[16px] max-h-[580px] overflow-y-auto">
+          <div className="w-full px-[60px] max-h-[580px] overflow-y-auto">
             <div className="grid grid-cols-3 gap-[4px] px-[15px]">
               <DoctorCard2 />
               <DoctorCard2 />
