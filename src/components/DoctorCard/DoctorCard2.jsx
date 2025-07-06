@@ -30,7 +30,7 @@ const DoctorCard2 = () => {
                 استشاري جراحة القلب والصدر سعودي
               </p>
 
-              <p className="text-[14px] text-[#4F4F4F] leading-[21px] flex items-center justify-center gap-[4px] text-right">
+              <p className="text-[14px] text-[#4F4F4F] leading-[21px] flex items-center justify-end gap-[4px] text-right">
                 <img
                   src={experienceIcon}
                   alt="exp"

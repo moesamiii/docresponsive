@@ -267,26 +267,26 @@ const Footer = () => {
             ))}
           </div>
 
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3" dir="rtl">
             <h3 className="text-white font-bold text-lg text-right">
               تواصل معنا
             </h3>
-            <div className="flex items-center justify-end gap-2">
-              <p className="text-[#9CA3AF] text-sm">+962790909806</p>
+            <div className="flex items-center gap-2">
               <img src={callIcon} alt="Phone" className="w-4 h-4" />
+              <p className="text-[#9CA3AF] text-sm">+962790909806</p>
             </div>
-            <div className="flex items-center justify-end gap-2">
-              <p className="text-[#9CA3AF] text-sm">info@ulmcare.jo</p>
+            <div className="flex items-center gap-2">
               <img src={mailIcon} alt="Mail" className="w-4 h-4" />
+              <p className="text-[#9CA3AF] text-sm">info@ulmcare.jo</p>
             </div>
-            <div className="flex items-start justify-end gap-2">
+            <div className="flex items-start gap-2">
+              <img src={locationIcon} alt="Location" className="w-4 h-4 mt-1" />
               <div className="text-right">
                 <p className="text-[#9CA3AF] text-sm">
                   Wasfi AlTal St. P.O. Box. 5873
                 </p>
                 <p className="text-[#9CA3AF] text-sm">Amman - 11953 Jordan</p>
               </div>
-              <img src={locationIcon} alt="Location" className="w-4 h-4 mt-1" />
             </div>
           </div>
 
